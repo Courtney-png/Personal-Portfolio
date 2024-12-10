@@ -6,97 +6,124 @@
     <meta name="viewport" content="width=device-width, initial scale =1.0">
     <title>Courtney's Portfolio'</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/083401c62a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-<div id="header">
-    <div class="container">
-        <nav>
-            <img src="Images/Dream Catcher.png" class="logo"> 
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="gallery.html">Portfolio</a></li>
-                <li><a href="#">Current Projects</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="header-text">
-            <p>Aspiring Game Designer</p>
-            <h1><span>3D Modelling</span> // <span>Level Design</span> // <span>Programming</span> </h1>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/Dream Catcher.png" class="logo">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="gallery.html">Portfolio</a></li>
+                    <li><a href="#">Current Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Aspiring Game Designer</p>
+                <h1><span>3D Modelling</span> // <span>Level Design</span> // <span>Programming</span> </h1>
 
-        </div>
-    </div>
-</div>
-
-<!-- ------about-------- -->
-
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about_col_1">
-                <h1 class="subtitle">About Me:</h1>
-                <p class="main_body">
-                    Hi, my name is Courtney and I'm from England. I have a strong passion for both playing and making video games and love everything about it from<br>
-                    conceptualisation to 3D Modelling, to Programming and Refining. I've known what I wanted to do for a lot of my life and have had enjoyed <br>
-                    worldbuilding since I was very young, often planning out elaborate stories with many characters and adventures for them to go on. In college,<br>
-                    I finally started combining this with my love for games and would start writing outlines of my own potential games.Though I still have a long<br>
-                    way to go, the games industry and creating a game from nothing is truly an amazing experience and I would be so grateful working on a team <br>
-                    with like-minded people.
-                </p>
-
-                <div class="tab_titles">
-                    <p class="tab_links active_link" onclick="opentab('skills')">Skills</p>
-                    <p class="tab_links" onclick="opentab('experience')">Experience</p>
-                    <p class="tab_links" onclick="opentab('education')">Education</p>
-                </div>
-                <div class="tab_contents active_tab" id="skills">
-                    <ul>
-                        <li><span>Game Engines:</span><br>Unity<br>Unreal Engine 5<br>A bit of Godot</li>
-                        <li><span>3D Modelling:</span><br>Blender - Mostly hard scultping however I'm learning more organic sculpting.'</li>
-                        <li><span>Programming:</span><br>C#<br>Unreal Blueprints<br>Java (basics)<br>HTML (basics)</li>
-                        <li><span>Management:</span><br>Microsoft Planner<br>Hack N Plan<br>A bit of Jira</li>
-                    </ul>
-                </div>
-                <div class="tab_contents" id="experience">
-                    <ul>
-                        <li><span>Sales Assistant:</span><br>Current = Tesco (Since 2022)</li>
-                        <li><span>Sales Assistant:</span><br>Matalan (2021-2022)</li>
-                        <li><span>Sales Assistant:</span><br>Tesco (2020-2021)</li>
-                    </ul>
-                </div>
-                <div class="tab_contents" id="education">
-                    <ul>
-                        <li><span>University of Liverpool:</span><br>BSc Game Design <br>Currently studying in 3rd year.</li>
-                        <li><span>Wyke Sixth Form:</span><br>Information Technology Extended Diploma <br>D*D*D*</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="about_col_2">
-                <img src="Images/Me 4.png" class="picture">
             </div>
         </div>
     </div>
-</div>
 
+    <!-- ------about-------- -->
 
-<script>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about_col_1">
+                    <h1 class="subtitle">About Me:</h1>
+                    <p class="main_body">
+                        Hi, my name is Courtney and I'm from England. I have a strong passion for both playing and making video games and love everything about it from<br>
+                        conceptualisation to 3D Modelling, to Programming and Refining. I've known what I wanted to do for a lot of my life and have had enjoyed <br>
+                        worldbuilding since I was very young, often planning out elaborate stories with many characters and adventures for them to go on. In college,<br>
+                        I finally started combining this with my love for games and would start writing outlines of my own potential games.Though I still have a long<br>
+                        way to go, the games industry and creating a game from nothing is truly an amazing experience and I would be so grateful working on a team <br>
+                        with like-minded people.
+                    </p>
 
-    var tablinks = document.getElementsByClassName("tab_links");
-    var tabcontents = document.getElementsByClassName("tab_contents");
+                    <div class="tab_titles">
+                        <p class="tab_links active_link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab_links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab_links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab_contents active_tab" id="skills">
+                        <ul>
+                            <li><span>Game Engines:</span><br>Unity<br>Unreal Engine 5<br>A bit of Godot</li>
+                            <li><span>3D Modelling:</span><br>Blender - Mostly hard scultping however I'm learning more organic sculpting.'</li>
+                            <li><span>Programming:</span><br>C#<br>Unreal Blueprints<br>Java (basics)<br>HTML (basics)</li>
+                            <li><span>Management:</span><br>Microsoft Planner<br>Hack N Plan<br>A bit of Jira</li>
+                        </ul>
+                    </div>
+                    <div class="tab_contents" id="experience">
+                        <ul>
+                            <li><span>Sales Assistant:</span><br>Current = Tesco (Since 2022)</li>
+                            <li><span>Sales Assistant:</span><br>Matalan (2021-2022)</li>
+                            <li><span>Sales Assistant:</span><br>Tesco (2020-2021)</li>
+                        </ul>
+                    </div>
+                    <div class="tab_contents" id="education">
+                        <ul>
+                            <li><span>University of Liverpool:</span><br>BSc Game Design <br>Currently studying in 3rd year.</li>
+                            <li><span>Wyke Sixth Form:</span><br>Information Technology Extended Diploma <br>D*D*D*</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="about_col_2">
+                    <img src="Images/Me 4.png" class="picture">
+                </div>
+            </div>
+        </div>
+    </div>
 
-    function opentab(tabname) {
-        for (tablink of tablinks) {
-            tablink.classList.remove("active_link");
+    <!-- ------Current Projects-------- -->
+    <div id="currProjects">
+        <div class="container">
+            <h1 class="subtitle">My Current Projects:</h1>
+            <div class="project_list">
+                <div>
+                    <i class="fa-solid fa-snowflake"></i>
+                    <h2>Shiver</h2>
+                    <p>Shiver is my third year group project in university. It's a 3D sci-fi horror game with a focus on keeping yourself warm whilst also being cautious of the unknown threat potentially around any corner.</p>
+                    <a href="#">Learn more...</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-dragon"></i>
+                    <h2>Adaption</h2>
+                    <p>A 2D creature collecting game where you must strategise to defeat other varieties whilst trying to figure out what has caused the current downfall of the world.With crafting, fighting and exploration, this is my current focus of my own.</p>
+                    <a href="#">Learn more...</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-flask"></i>
+                    <h2>Avoid</h2>
+                    <p>My long term project. A lot of the inital planning has been done for it such as a Game Design Document as well as feedback and the core concepts iterated upon. The main focus for it is a 2D action adventure game with the priority being the boss fights and how they feel.</p>
+                    <a href="#">Learn more...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab_links");
+        var tabcontents = document.getElementsByClassName("tab_contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active_link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active_tab");
+            }
+            event.currentTarget.classList.add("acive_link");
+            document.getElementById(tabname).classList.add("active_tab");
         }
-        for (tabcontent of tabcontents) {
-            tabcontent.classList.remove("active_tab");
-        }
-        event.currentTarget.classList.add("acive_link");
-        document.getElementById(tabname).classList.add("active_tab");
-    }
 
-</script>
+    </script>
 
 </body>
 </html>
