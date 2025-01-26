@@ -14,13 +14,15 @@
         <div class="container">
             <nav>
                 <img src="Images/Dream Catcher.png" class="logo">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Current Projects</a></li>
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#currProjects">Current Projects</a></li>
                     <li><a href="gallery.html">Portfolio</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
             </nav>
             <div class="header-text">
                 <p>Aspiring Game Designer</p>
@@ -42,7 +44,7 @@
                         conceptualisation to 3D Modelling, to Programming and Refining. I've known what I wanted to do for a lot of my life and have had enjoyed <br>
                         worldbuilding since I was very young, often planning out elaborate stories with many characters and adventures for them to go on. In college,<br>
                         I finally started combining this with my love for games and would start writing outlines of my own potential games.Though I still have a long<br>
-                        way to go, the games industry and creating a game from nothing is truly an amazing experience and I would be so grateful working on a team <br>
+                        way to go in the games industry, creating a game from nothing is truly an amazing experience and I would be so grateful working on a team <br>
                         with like-minded people.
                     </p>
 
@@ -54,7 +56,7 @@
                     <div class="tab_contents active_tab" id="skills">
                         <ul>
                             <li><span>Game Engines:</span><br>Unity<br>Unreal Engine 5<br>A bit of Godot</li>
-                            <li><span>3D Modelling:</span><br>Blender - Mostly hard scultping however I'm learning more organic sculpting.'</li>
+                            <li><span>3D Modelling:</span><br>Blender - Mostly hard scultping however I'm learning more organic sculpting.</li>
                             <li><span>Programming:</span><br>C#<br>Unreal Blueprints<br>Java (basics)<br>HTML (basics)</li>
                             <li><span>Management:</span><br>Microsoft Planner<br>Hack N Plan<br>A bit of Jira</li>
                         </ul>
@@ -94,7 +96,7 @@
                 <div>
                     <i class="fa-solid fa-dragon"></i>
                     <h2>Adaption</h2>
-                    <p>A 2D creature collecting game where you must strategise to defeat other varieties whilst trying to figure out what has caused the current downfall of the world.With crafting, fighting and exploration, this is my current focus of my own.</p>
+                    <p>A 2D creature collecting game where you must strategise to defeat other varieties whilst trying to figure out what has caused the current downfall of the world. With crafting, fighting and exploration, this is my current independent focus.</p>
                     <a href="#">Learn more...</a>
                 </div>
                 <div>
@@ -110,7 +112,7 @@
     <div id="portfolio">
         <div class="container">
             <h1 class="subtitle">My Portfolio</h1>
-            <p>Here are some of my proudest, recent peices of work however, by following the link you can find my entire portfolio.</p>
+            <p>Here are some of my proudest, recent pieces of work however, by following the link you can find my entire portfolio.</p>
             <div class="work_list">
                 <div class="work">
                     <img src="Images/Gallery/Dragon - Small.JPG">
@@ -157,12 +159,13 @@
                     <a href="Images/CV - Updated.pdf" download class="button btn2">Download CV</a>
                 </div>
                 <div class="contact_right">
-                    <form>
+                    <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Please Enter Your Name..." required>
                         <input type="email" name="Email" placeholder="Your Email" required>
                         <textarea name="Message" rows="6" placeholder="Your Message..."></textarea>
                         <button type="Submit" class="button btn2">Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -187,6 +190,38 @@
             document.getElementById(tabname).classList.add("active_tab");
         }
 
+    </script>
+
+    <script>
+
+        var sidemenu = document.getElementById("sidemenu");
+
+        function openmenu() {
+            sidemenu.style.right = "0";
+        }
+        function closemenu() {
+            sidemenu.style.right = "-200px"
+        }
+
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzxUfXGqngbDGsDM0IPB7Rd_tUA4yv45YQYP3mNwj_B-khThyubnPZtgvUTVt6HlVkV/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Your message has been submitted!"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    },5000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
     </script>
 
 </body>

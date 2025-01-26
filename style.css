@@ -5,15 +5,18 @@
 
     box-sizing: border-box;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 body {
-    background: #433E49;
-    color: #F3E8EB;
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 }
 #header{
     width: 100%;
     height: 100vh;
-    background-image: url(Images/background.png);
+    background-image: url(Images/backing2.png);
     background-size: cover;
     background-position: center;
 }
@@ -40,7 +43,7 @@ nav ul li{
 }
 
 nav ul li a{
-    color: #F3E8Eb;
+    color: rgb(255, 255, 255);
     text-decoration: none;
     font-size: 22px;
     position: relative;
@@ -50,7 +53,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #DBC1AD;
+    background: #ceb4ff;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -74,14 +77,14 @@ nav ul li a:hover::after{
 }
 
     .header-text h1 span {
-        color: #DBC1AD;
+        color: #ceb4ff;
     }
 
 
 /*-----------about--------------*/
 #about {
     padding: 80px 0;
-    color: #F3E8Eb;
+    color: rgb(255, 255, 255);
 }
 .row{
     display: flex;
@@ -113,7 +116,7 @@ about_col_1{
 }
 .tab_links {
     margin-right: 50px;
-    color: #F3E8Eb;
+    color: rgb(255, 255, 255);
     font-size: 18px;
     font-weight: 500;
     cursor: pointer;
@@ -123,7 +126,7 @@ about_col_1{
         content: '';
         width: 0;
         height: 3px;
-        background: #DBC1AD;
+        background: #92ebff;
         position: absolute;
         left: 0;
         bottom: -8px;
@@ -138,7 +141,7 @@ about_col_1{
     margin: 10px 0;
 }
 .tab_contents ul li span {
-        color: #DBC1AD;
+        color: #92ebff;
         font-size: 20px;
 }
 .tab_contents{
@@ -162,9 +165,10 @@ about_col_1{
     margin-bottom: 50px;
 }
 .project_list div{
-    background: #928490;
+    background: #DBC1AD;
+    color: rgb(0, 0, 0);
     padding: 40px;
-    font-size: 15px;
+    font-size: 18px;
     font-weight: 300;
     border-radius: 10px;
     transition: background 0.5s, transform 0.5s;
@@ -178,28 +182,24 @@ about_col_1{
     font-size: 30px;
     font-weight: 500;
     text-decoration: underline;
-    color: #DBC1AD;
+    color: rgb(0, 0, 0);
     margin-bottom: 15px;
 }
 .project_list div a{
-    text-decoration: none;
-    color: #F3E8EB;
+    text-decoration: underline;
+    color: rgb(0, 0, 0);
     margin-top: 20px;
     display: inline-block;
 }
 .project_list div:hover{
-    background: #6d9871;
+    background: #ceb4ff;
     transform: translateY(-10px);
-}
-#shiver_back {
-    background-image: url(Images/ShiverArtwork.png);
-    background-size: cover;
-    background-position: center;
 }
 
 /*-----------Portfolio--------------*/
 #portfolio{
     padding: 50px 0;
+    font-size: 18px;
 }
 .work_list {
     display: grid;
@@ -222,7 +222,7 @@ about_col_1{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgb(0, 0, 0, 0.60), #6d9871);
+    background: linear-gradient(rgb(0, 0, 0, 0.60), #ceb4ff);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -238,12 +238,14 @@ about_col_1{
 }
 .layer h3{
     font-weight: 500;
+    font-size: 24px;
     margin-bottom: 20px;
-    color: #DBC1AD;
+    color: #92ebff;
     text-decoration: underline;
 }
 .layer p{
-    font-size: 14px;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
 }
 .layer a{
     margin-top: 20px;
@@ -268,15 +270,15 @@ about_col_1{
     margin: 50px auto;
     width: fit-content;
     border: 1px solid #F3E8EB;
-    background: #928490;
+    background: #DBC1AD;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none; 
-    color: #F3E8EB;
+    color: rgb(0, 0, 0);
     transition: background 0.5s;
 }
 .button:hover{
-    background: #6d9871;
+    background: #ceb4ff;
 }
 
 
@@ -323,7 +325,7 @@ form .btn2{
     transition: transform 0.5s;
 }
 .social_icons a:hover{
-    color: #6d9871;
+    color: #ceb4ff;
     transform: translateY(-5px);
 }
 .button.btn2{
@@ -340,7 +342,76 @@ form .btn2{
     font-size: 22px;
     margin-top: 20px;
 }
+#msg{
+    color: #ceb4ff;
+    margin-top: -40px;
+    font-size: 18px;
+    display: block;
+}
 
+nav .fas{
+    display: none;
+}
+
+/*-----CSS for Smaller Screens------*/
+@media only screen and (max-width: 600px){
+    #header{
+        background-image: url(Images/phoneback.png);
+    }
+    .header-text {
+        margin-top: 100px;
+        font-size: 30px;
+        text-align: left;
+        text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+    }
+    .header-text h1{
+        font-size: 25px;
+    }
+    nav .fas{
+        display: block;
+        font-size: 25px;
+    }
+    nav ul{
+        background: #ceb4ff;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 200vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fas{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        cursor: pointer;
+    }
+    .subtitle{
+        font-size: 40px;
+    }
+    .about_col_1, .about_col_2{
+        flex-basis: 100%;
+    }
+    .about_col_1{
+        font-size: 14px;
+    }
+    .tab_links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact_left, .contact_right{
+        flex-basis: 100%;
+    }
+    .copyright{
+        font-size: 14px;
+    }
+}
 
 
 
