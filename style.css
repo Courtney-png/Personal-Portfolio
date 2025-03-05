@@ -479,8 +479,6 @@ nav .fas{
     border-radius: 10%;
     margin: 20px 20px;  
     border: 5px solid rgb(0, 0, 0);
-    height: 540px;
-    width: 960px;
     transition: transform 0.5s;
 }
 .scroll_container img:hover{
