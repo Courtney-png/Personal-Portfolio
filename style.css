@@ -98,7 +98,7 @@ nav ul li a:hover::after{
     flex-basis: 35%;
 }
 
-about_col_1{
+.about_col_1{
     flex-basis: 60%;
 }
 .subtitle{
@@ -197,6 +197,29 @@ about_col_1{
     background: #ceb4ff;
     transform: translateY(-10px);
 }
+/*-----------Finished Projects--------------*/
+#finProjects {
+    padding: 80px 0;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+}
+.finrow {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 50px 20px;
+}
+.left_col {
+    align-content: center;
+    text-align:center;
+    flex-basis: 20%;
+}
+.right_col {
+    align-content: center;
+    flex-basis: 80%;
+}
+
 
 /*-----------Portfolio--------------*/
 #portfolio{
